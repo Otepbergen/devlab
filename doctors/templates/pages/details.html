@@ -1,0 +1,16 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<h1>Footballer: {{player.name}} </h1>
+<h1>Statistics: </h1>
+
+<ul>
+    {% for p in ans %}
+    <li><h2 style="font-family: 'Agency', sans-serif, Arial">{{ p.club }}</h2></li>
+        <p>Games: <strong>{{ p.game}}</strong></p>
+        <p>Goals: <strong>{{ p.goal}}</strong></p>
+        <p>Assists: <strong>{{ p.assist}}</strong></p>
+    {% endfor %}
+</ul>
+{% endblock %}
